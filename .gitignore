@@ -1,0 +1,8 @@
+downloads/
+m2deps/
+jobs/fraud-detector/builds/
+jobs/fraud-detector/cobertura/
+jobs/fraud-detector/lastStable
+jobs/fraud-detector/lastSuccessful
+jobs/fraud-detector/nextBuildNumber
+jobs/fraud-detector/workspace*
