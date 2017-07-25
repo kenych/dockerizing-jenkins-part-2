@@ -1,8 +1,8 @@
 downloads/
 m2deps/
-jobs/fraud-detector/builds/
-jobs/fraud-detector/cobertura/
-jobs/fraud-detector/lastStable
-jobs/fraud-detector/lastSuccessful
-jobs/fraud-detector/nextBuildNumber
-jobs/fraud-detector/workspace*
+jobs/maze-explorer/builds/
+jobs/maze-explorer/cobertura/
+jobs/maze-explorer/lastStable
+jobs/maze-explorer/lastSuccessful
+jobs/maze-explorer/nextBuildNumber
+jobs/maze-explorer/workspace*

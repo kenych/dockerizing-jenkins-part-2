@@ -38,7 +38,7 @@ docker run -d -p 8080 -v `pwd`/downloads:/var/jenkins_home/downloads \
     -e ARTIFACTORY_URL=http://${IP}:${artifactory_port}/artifactory/example-repo-local \
     myjenkins:latest
 
-echo "Sonarqube is running at ${IP}:${sonar_port}"
-echo "Artifactory is running at ${IP}:${artifactory_port}"
-echo "Jenkins is running at ${IP}:$(getContainerPort myjenkins)"
+echo "Sonarqube is running at http://${IP}:${sonar_port}"
+echo "Artifactory is running at http://${IP}:${artifactory_port}"
+echo "Jenkins is running at http://${IP}:$(getContainerPort myjenkins)"
 
