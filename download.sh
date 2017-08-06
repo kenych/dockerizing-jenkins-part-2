@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-docker rmi myjenkins -f
-
 docker pull jenkins:2.60.1
 docker pull sonarqube:6.3.1
 docker pull docker.bintray.io/jfrog/artifactory-oss:5.4.4
