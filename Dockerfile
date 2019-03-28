@@ -1,4 +1,4 @@
-FROM jenkins:2.60.1
+FROM jenkins/jenkins:2.164.1
 
 MAINTAINER Kayan Azimov
 

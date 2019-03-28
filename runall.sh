@@ -4,8 +4,8 @@ function getContainerPort() {
     echo $(docker port $1 | sed 's/.*://g')
 }
 
-docker pull jenkins:2.60.1
-docker pull sonarqube:6.3.1
+docker pull jenkins/jenkins:2.164.1
+docker pull sonarqube:6.7.6-community
 
 if [ ! -d downloads ]; then
     mkdir downloads
@@ -18,9 +18,9 @@ docker stop mysonar myjenkins artifactory 2>/dev/null
 
 docker build -t myjenkins .
 
-docker run -d -p 9000 --rm --name mysonar sonarqube:6.3.1
+docker run -d -p 9000 --rm --name mysonar sonarqube:6.7.6-community
 
-docker run  -d --rm -p 8081 --name artifactory  docker.bintray.io/jfrog/artifactory-oss:5.4.4
+docker run  -d --rm -p 8081 --name artifactory  docker.bintray.io/jfrog/artifactory-oss:5.7.4
 
 sonar_port=$(getContainerPort mysonar)
 artifactory_port=$(getContainerPort artifactory)
@@ -41,4 +41,3 @@ docker run -d -p 8080 -v `pwd`/downloads:/var/jenkins_home/downloads \
 echo "Sonarqube is running at http://${IP}:${sonar_port}"
 echo "Artifactory is running at http://${IP}:${artifactory_port}"
 echo "Jenkins is running at http://${IP}:$(getContainerPort myjenkins)"
-
